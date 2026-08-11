@@ -1,0 +1,339 @@
+/* =========================================
+   PROJECTS PAGE
+========================================= */
+
+.projects-page {
+  min-height: 100vh;
+
+  background: #f4f1eb;
+
+  padding: 120px 60px 100px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.projects-heading {
+  max-width: 1400px;
+
+  margin: 0 auto 60px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  gap: 40px;
+}
+
+.projects-label {
+  margin-bottom: 14px;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  color: #77716a;
+}
+
+.projects-heading h1 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(55px, 7vw, 90px);
+
+  font-weight: 400;
+
+  line-height: 0.9;
+
+  letter-spacing: -3px;
+
+  color: #171614;
+}
+
+.projects-description {
+  max-width: 330px;
+
+  margin-bottom: 5px;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  color: #77716a;
+}
+
+
+/* =========================================
+   PROJECT GRID
+========================================= */
+
+.projects-grid {
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 55px 25px;
+}
+
+
+/* =========================================
+   PROJECT CARD
+========================================= */
+
+.project-card {
+  display: block;
+
+  color: #171614;
+
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   IMAGE BOX
+========================================= */
+
+.project-card-image-box {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 4 / 3;
+
+  overflow: hidden;
+
+  background: #ded9d1;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.project-card-image {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition:
+    transform 1.2s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.project-card:hover .project-card-image {
+  transform: scale(1.04);
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.project-card-hover {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  background: rgba(0, 0, 0, 0.22);
+
+  color: white;
+
+  opacity: 0;
+
+  transition: opacity 0.4s ease;
+}
+
+.project-card:hover .project-card-hover {
+  opacity: 1;
+}
+
+.project-card-hover span:first-child {
+  font-size: 10px;
+
+  letter-spacing: 2.5px;
+
+  font-weight: 500;
+}
+
+.view-arrow {
+  font-size: 18px;
+}
+
+
+/* =========================================
+   PHOTO COUNT
+========================================= */
+
+.photo-count {
+  position: absolute;
+
+  right: 15px;
+
+  bottom: 13px;
+
+  color: white;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .photo-count {
+  opacity: 1;
+}
+
+
+/* =========================================
+   CARD DETAILS
+========================================= */
+
+.project-card-details {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 20px;
+
+  padding-top: 16px;
+}
+
+.project-card-details h2 {
+  margin: 0 0 6px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 25px;
+
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+.project-card-details p {
+  margin: 0;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  color: #77716a;
+}
+
+.project-location {
+  padding-top: 3px;
+
+  white-space: nowrap;
+
+  font-size: 9px;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  color: #77716a;
+}
+
+
+/* =========================================
+   HOVER CARD
+========================================= */
+
+.project-card-details {
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-card-details {
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .projects-page {
+    padding: 100px 35px 80px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 45px 20px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .projects-page {
+    padding: 90px 20px 60px;
+  }
+
+  .projects-heading {
+    display: block;
+
+    margin-bottom: 45px;
+  }
+
+  .projects-heading h1 {
+    font-size: 58px;
+
+    letter-spacing: -2px;
+  }
+
+  .projects-description {
+    margin-top: 25px;
+
+    font-size: 12px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .project-card-details h2 {
+    font-size: 23px;
+  }
+
+}
