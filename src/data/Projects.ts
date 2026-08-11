@@ -1,32 +1,44 @@
-export const projects = [
+export interface Project {
+  id: string;
+  title: string;
+  category: string;
+  location: string;
+  description: string;
+  cover: string;
+  images: string[];
+}
+
+export const projects: Project[] = [
   {
     id: "duplex-house",
+
     title: "Duplex House",
-    category: "Residential",
+
+    category: "Residential Interior",
+
     location: "Mumbai, India",
 
-    cover: "/images/projects/Duplex House/Photo 1.jpeg",
+    description:
+      "A contemporary duplex interior designed with warm materials, refined details and a comfortable sense of luxury.",
+
+    cover:
+      "/images/projects/Duplex House/Photo 1.png",
 
     images: [
-      "/images/projects/Duplex House/Photo 1.jpeg",
-      "/images/projects/Duplex House/Photo 2.jpeg",
-      "/images/projects/Duplex House/Photo 3.jpeg",
-      "/images/projects/Duplex House/Photo 4.jpeg",
-      "/images/projects/Duplex House/Photo 5.jpeg",
-      "/images/projects/Duplex House/Photo 6.jpeg",
-      "/images/projects/Duplex House/Photo 7.jpeg",
-      "/images/projects/Duplex House/Photo 8.jpeg",
+      "/images/projects/Duplex House/Photo 1.png",
+      "/images/projects/Duplex House/Photo 2.png",
+      "/images/projects/Duplex House/Photo 3.png",
+      "/images/projects/Duplex House/Photo 4.png",
+      "/images/projects/Duplex House/Photo 5.png",
+
+      "/images/projects/Duplex House/Photo 7.png",
+      "/images/projects/Duplex House/Photo 8.png",
+
       "/images/projects/Duplex House/Photo 9.jpeg",
-      "/images/projects/Duplex House/Photo 10.jpeg",
+
       "/images/projects/Duplex House/Photo 11.jpeg",
       "/images/projects/Duplex House/Photo 12.jpeg",
       "/images/projects/Duplex House/Photo 13.jpeg",
-      "/images/projects/Duplex House/Photo 14.jpeg",
-      "/images/projects/Duplex House/Photo 15.jpeg",
-      "/images/projects/Duplex House/Photo 16.jpeg",
-      "/images/projects/Duplex House/Photo 17.jpeg",
-      "/images/projects/Duplex House/Photo 18.jpeg",
-      "/images/projects/Duplex House/Photo 19.jpeg",
     ],
   },
 ];
